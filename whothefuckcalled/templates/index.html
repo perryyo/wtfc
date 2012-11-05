@@ -1,4 +1,39 @@
 <html>
+  <head>
+    <style>
+* {
+  font-family: Chewy;
+  font-size: 75px;
+}
+
+@media only screen and (max-width: 480px) {
+  * {
+    font-size: 50px;
+  }
+}
+
+h1 {
+color: black;
+}
+
+#submit {
+height: 100px;
+background: #eee;
+}
+#submit:hover {
+background: #aaa;
+}
+
+#number {
+height: 100px;
+        text-align: center;
+margin: 10px;
+width: 95%;
+       border-radius: 5px;
+}
+    </style>
+  </head>
+
   <body>
     {% if name %}
     <div style="text-align: center;">
