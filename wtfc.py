@@ -13,5 +13,5 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     number = request.args.get('number')
-    name = get('https://api.opencnam.com/v2/phone/%s?format=pbx' % number) if number else 'NO IDEA WHO THIS IS'
+    name = get('https://api.opencnam.com/v2/phone/%s?format=pbx' % number) if number else ''
     return render_template('index.html', name=name)
