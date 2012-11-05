@@ -1,7 +1,25 @@
 <html>
   <body>
-    <p>hi! {{name}}</p>
+    {% if name %}
+    <div style="text-align: center;">
+      <h1 style="color: red;">{{name}}</h1>
+      <h2>CALLED YOU!</h2>
+    </div>
+    {% else %}
+    <div style="text-align: center;">
+      <h1>WHO THE FUCK CALLED ME?</h1>
+      <form>
+        <input id="number" name="number" placeholder="1 (818) 133-7H4X"
+        type="tel" />
+        <br/>
+        <button id="submit" type="submit">FIND OUT</button>
+      </form>
+    </body>
 
+    {% endif %}
+
+
+  </div>
   </body>
 </html>
 
