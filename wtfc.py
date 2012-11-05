@@ -17,6 +17,6 @@ app.config['OPENCNAM_AUTH_TOKEN'] = environ.get('OPENCNAM_AUTH_TOKEN', '')
 @app.route('/')
 def index():
     number = request.args.get('number')
-    name = get('https://api.opencnam.com/v2/phone/%s?format=pbx&account_sid=%s&auth_token=%s' % number,
+    name = get('https://api.opencnam.com/v2/phone/%s?format=pbx' % number,
             auth=(app.config['OPENCNAM_ACCOUNT_SID'], app.config['OPENCNAM_AUTH_TOKEN'])).text if number else ''
     return render_template('index.html', name=name)
