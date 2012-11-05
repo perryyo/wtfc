@@ -1,7 +1,8 @@
 """WTFC"""
 
 
-from flask import Flask, redirect, render_template, url_for
+from flask import Flask, redirect, render_template, request, url_for
+from requests import get
 
 
 ##### GLOBALS
@@ -11,4 +12,6 @@ app = Flask(__name__)
 ##### VIEWS
 @app.route('/')
 def index():
-    return render_template('index.html')
+    number = request.args.get('number')
+    name = get('https://api.opencnam.com/v2/phone/%s?format=pbx' % number) if number else 'NO IDEA WHO THIS IS'
+    return render_template('index.html', name=name)
