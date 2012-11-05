@@ -1,10 +1,14 @@
-#!/usr/bin/env python
-import os
-import sys
+"""WTFC management commands."""
 
-if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "whothefuckcalled.settings.dev")
 
-    from django.core.management import execute_from_command_line
+from flask.ext.script import Manager
 
-    execute_from_command_line(sys.argv)
+from wtfc import app
+
+
+##### GLOBALS
+manager = Manager(app)
+
+
+if __name__ == '__main__':
+    manager.run()
