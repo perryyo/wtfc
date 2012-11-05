@@ -1,2 +1,6 @@
--r reqs/prod.txt
-pylibmc==1.2.3
+Flask==0.9
+Flask-Script==0.5.0
+gevent==0.13.8
+gunicorn==0.14.6
+newrelic==1.5.0.103
+requests==0.14.0
