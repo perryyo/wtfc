@@ -1,60 +1,47 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <style>
-* {
-  font-family: Chewy;
-  font-size: 75px;
-}
 
-@media only screen and (max-width: 480px) {
-  * {
-    font-size: 50px;
-  }
-}
+    <title>
+      Who the fuck called me?!
+    </title>
 
-h1 {
-color: black;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-#submit {
-height: 100px;
-background: #eee;
-}
-#submit:hover {
-background: #aaa;
-}
+    {% block head_css %}
+    <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet'
+    type='text/css'>
 
-#number {
-height: 100px;
-        text-align: center;
-margin: 10px;
-width: 95%;
-       border-radius: 5px;
-}
-    </style>
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet"/>
+    {% endblock %}
+
   </head>
 
   <body>
-    {% if name %}
-    <div style="text-align: center;">
-      <h1 style="color: red;">{{name}}</h1>
+    <div class="wrap center">
+      {% if name %}
+      <h1 class="name">{{name}}</h1>
       <h2>CALLED YOU!</h2>
-    </div>
-    {% else %}
-    <div style="text-align: center;">
-      <h1>WHO THE FUCK CALLED ME?</h1>
-      <form>
-        <input id="q" name="q" placeholder="1 (818) 133-7H4X"
-        type="tel" />
-        <br/>
-        <button id="submit" type="submit">FIND OUT</button>
+      {% else %}
+      <h1 class="header">who the $*#! called?!</h1>
+      <form method="get">
+        <div class="center">
+          <input id="q" name="q" placeholder="1 (123) 456-7890"
+          type="tel" />
+        </div>
+        <button id="submit" class="btn" type="submit">FIND OUT</button>
       </form>
-    </body>
+      {% endif %}
 
-    {% endif %}
-
-
-  </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    </div>
+    <div class="box center">
+      <h3>Powered by:</h3>
+      <a href="https://www.opencnam.com/">
+        <img src="https://www.opencnam.com/static/images/logo.png" alt="opencnam"/>
+      </a>
+    </div>
   </body>
 </html>
-

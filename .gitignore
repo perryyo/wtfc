@@ -16,3 +16,6 @@ build
 
 # Celerybeat scheduler file:
 celerybeat-schedule
+
+# Env folder
+env/
