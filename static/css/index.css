@@ -1,3 +1,4 @@
+/* Reset stuffs */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,31 +47,39 @@ table {
 /* WTFC.ME styles */
 
 * {
-  font-family: Chewy;
   font-size: 75px;
   background: #eee;
 }
 
 html, body {
+  font-family: Chewy;
   padding-top: 0;
   height: 100%;
 }
-.wrap {
-  min-height: 100%;
-  margin: 0 auto -200px;
-}
+
 .center {
   text-align: center;
 }
 
+h1 {
+  font-family: Chewy;
+  color: black;
+}
+
 h1.name {
-    color: red;
-  }
-  h3 {
-    font-size: 25px;
-    font-family: Chewy;
-    margin: 5px;
-  }
+  color: red;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+  font-family: Chewy;
+  margin: 5px;
+}
+
 .btn {
   line-height: 30px;
   border: 2px solid #DDD;
@@ -105,18 +114,17 @@ h1.name {
   text-decoration: none;
   border-radius: 5px;
 }
+.wrap {
+  min-height: 100%;
+}
 
 @media (max-width: 480px) {
-  * {
-    font-size: 50px;
-  }
+  * { font-size: 50px; }
   h1 {
-    color: black;
-    font-size: 75px;
-    font-family: Chewy;
+    font-size: 65px;
   }
   h1.header {
-    margin: 25px;
+    margin: 15px;
   }
   #q {
     padding: 5px;
@@ -125,11 +133,20 @@ h1.name {
 
 @media (min-width: 480px) {
   h1 {
-    color: black;
     font-size: 100px;
-    font-family: Chewy;
   }
   h1.header {
     margin: 50px;
+  }
+}
+
+@media (max-height: 400px) {
+  .wrap {
+    margin: 0px auto 20px;
+  }
+}
+@media (min-height: 400px) {
+  .wrap {
+    margin: 0px auto -200px;
   }
 }
