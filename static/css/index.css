@@ -49,6 +49,7 @@ table {
 * {
   font-size: 75px;
   background: #eee;
+  font-family: Chewy;
 }
 
 html, body {
@@ -62,7 +63,6 @@ html, body {
 }
 
 h1 {
-  font-family: Chewy;
   color: black;
 }
 
@@ -76,8 +76,11 @@ h2 {
 
 h3 {
   font-size: 25px;
-  font-family: Chewy;
   margin: 5px;
+}
+
+.box { 
+  height: 50px;
 }
 
 .btn {
@@ -140,12 +143,12 @@ h3 {
   }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 600px) {
   .wrap {
-    margin: 0px auto 20px;
+    margin: 0px auto 50px;
   }
 }
-@media (min-height: 400px) {
+@media (min-height: 600px) {
   .wrap {
     margin: 0px auto -200px;
   }
