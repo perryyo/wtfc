@@ -26,5 +26,4 @@ def index():
         )
         name = resp.text
 
-    return render_template('index.html', name=name, success=True if number and resp.status
-            == 200 else False)
+    return render_template('index.html', name=name, success=True if number and resp.status == 200 else False)
