@@ -68,12 +68,10 @@ h1 {
 
 h1.name {
   color: red;
-  margin-top: 25px;
 }
 
 h2 {
   font-size: 35px;
-  margin-bottom: 30px;
 }
 
 h3 {
@@ -101,6 +99,7 @@ h3 {
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 20px;
 }
 #q {
   border: 2px solid #DDD;
@@ -118,6 +117,7 @@ h3 {
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 .wrap {
   min-height: 100%;
