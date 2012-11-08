@@ -15,7 +15,7 @@
           <input id="q" name="q" placeholder="{% if number %}{{ number }}{% else %}818-456-7890{% endif %}" type="tel" autofocus />
         </div>
         {% if number %}
-          {% if success %}
+          {% if name %}
             <h1 class="name">{{ name }}</h1>
             <h2>CALLED YOU!</h2>
           {% else %}

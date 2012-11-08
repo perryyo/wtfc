@@ -27,5 +27,4 @@ def index():
         name = resp.json['name'] if resp.status == 200 else ''
         number = resp.json['number'] if resp.status == 200 else number
 
-    return render_template('index.html', name=name, number=number,
-            success=True if number and name else False)
+    return render_template('index.html', name=name, number=number)
