@@ -68,10 +68,12 @@ h1 {
 
 h1.name {
   color: red;
+  margin-top: 20px;
 }
 
 h2 {
   font-size: 35px;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -79,7 +81,7 @@ h3 {
   margin: 5px;
 }
 
-.box { 
+.box {
   height: 50px;
 }
 
