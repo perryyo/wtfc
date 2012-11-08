@@ -9,6 +9,7 @@ from requests import get
 
 ##### GLOBALS
 app = Flask(__name__)
+app.config['DEBUG'] = True if environ.get('DEBUG') else False
 app.config['OPENCNAM_ACCOUNT_SID'] = environ.get('OPENCNAM_ACCOUNT_SID', '')
 app.config['OPENCNAM_AUTH_TOKEN'] = environ.get('OPENCNAM_AUTH_TOKEN', '')
 
@@ -24,7 +25,7 @@ def index():
         resp = get('https://api.opencnam.com/v2/phone/%s?format=json' % number,
             auth = (app.config['OPENCNAM_ACCOUNT_SID'], app.config['OPENCNAM_AUTH_TOKEN'])
         )
-        name = resp.json['name'] if resp.status == 200 else ''
-        number = resp.json['number'] if resp.status == 200 else number
+        name = resp.json['name'] if resp.status_code == 200 else ''
+        number = resp.json['number'] if resp.status_code == 200 else number
 
     return render_template('index.html', name=name, number=number)
