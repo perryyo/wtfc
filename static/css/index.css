@@ -66,8 +66,9 @@ h1 {
   color: black;
 }
 
-h1.name {
+h1.name a, h1.name a:link, h1.name a:visited, h1.name a:hover, h1.name a:active {
   color: red;
+  text-decoration: none;
 }
 
 h2 {
