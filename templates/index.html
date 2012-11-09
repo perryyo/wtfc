@@ -54,6 +54,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        var $q = $('#q');
+        var $box = $('.box');
+        if ($box.length > 0) {
+          $box[0].scrollIntoView(true);
+        } else {
+          $q[0].scrollIntoView(true);
+        }
+      });
+    </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36181169-1']);
