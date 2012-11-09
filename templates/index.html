@@ -31,16 +31,15 @@
 
       <div class="row-fluid">
         {% if number %}
-        {% if name %}
-        <div class="box">
-          <h1 class="name"><a href="http://www.spokeo.com/?g=phone_text_8_A3181141367">{{ name }}</a></h1>
-          <h2>CALLED YOU!</h2>
-          <h3>Still want to know more? Find out at <a class="affiliate" href="http://www.spokeo.com/?g=phone_text_8_A3181141367">Spokeo</a></h3>
-        </div>
-        {% else %}
-        <h1 class="name">UNAVAILABLE</h1>
-        {% endif %}
-        {% else %}
+          {% if name %}
+            <div class="box">
+              <h1 class="name"><a href="http://www.spokeo.com/?g=phone_text_8_A3181141367">{{ name }}</a></h1>
+              <h2>CALLED YOU!</h2>
+              <h3>Still want to know more? Find out at <a class="affiliate" href="http://www.spokeo.com/?g=phone_text_8_A3181141367">Spokeo</a></h3>
+            </div>
+          {% else %}
+            <h1 class="name">UNAVAILABLE</h1>
+          {% endif %}
         {% endif %}
       </div>
 
@@ -60,7 +59,7 @@
         var $box = $('.box');
         if ($box.length > 0) {
           $box[0].scrollIntoView(true);
-        } else {
+          } else {
           $q[0].scrollIntoView(true);
         }
       });
@@ -74,6 +73,6 @@
        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
        })();
-</script>
+     </script>
    </body>
  </html>
