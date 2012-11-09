@@ -1,78 +1,48 @@
-/* Reset stuffs */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* WTFC.ME styles */
-
 * {
-  font-size: 75px;
   background: #eee;
   font-family: Chewy;
 }
 
 html, body {
-  font-family: Chewy;
-  padding-top: 0;
-  height: 100%;
+  background: #eee;
 }
 
-.center {
-  text-align: center;
-}
-
-h1 {
+a {
   color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+a.affiliate {
+  color: #555;
+}
+
+a.affiliate:hover {
+  text-decoration: underline;
+}
+
+.jumbotron h1 {
+  font-size: 100px;
+  line-height: 1;
+  color: black;
+  margin: 20px;
 }
 
 h1.name a, h1.name a:link, h1.name a:visited, h1.name a:hover, h1.name a:active {
+  font-size: 72px;
+  line-height: 1;
   color: red;
   text-decoration: none;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 55px;
+  margin: 10px;
+  color: #555;
 }
 
 h3 {
@@ -81,79 +51,34 @@ h3 {
 }
 
 .box {
-  height: 50px;
+  border-radius: 5px;
+  line-height: 100px;
+  border: 2px solid #ddd;
+  margin-bottom: 25px;
 }
 
-.btn {
-  line-height: 30px;
+.button {
   border: 2px solid #DDD;
-  background-clip: border-box;
-  background-origin: padding-box;
-  background-size: auto;
   background-color: #fafafa;
-  box-sizing: border-box;
   cursor: pointer;
   color: #646464;
   height: 100px;
-  min-height: 30px;
+  font-size: 75px;
   padding: 20px;
   text-align: center;
-  text-decoration: none;
   border-radius: 5px;
-  margin-top: 20px;
+  font-family: Chewy;
 }
 #q {
   border: 2px solid #DDD;
-  background-clip: border-box;
-  background-origin: padding-box;
-  background-size: auto;
   background-color: #fafafa;
-  box-sizing: border-box;
   color: #646464;
   height: 100px;
-  min-height: 30px;
-  padding: 10px;
-  margin: 10px;
-  width: 95%;
+  font-family: Chewy;
+  font-size: 72px;
+  line-height: 100px;
+  padding: 0px;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
-  margin-bottom: 20px;
-}
-.wrap {
-  min-height: 100%;
-}
-
-@media (max-width: 480px) {
-  * { font-size: 50px; }
-  h1 {
-    font-size: 65px;
-  }
-  h1.header {
-    margin: 15px;
-  }
-  #q {
-    padding: 5px;
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 480px) {
-  h1 {
-    font-size: 100px;
-  }
-  h1.header {
-    margin: 50px;
-  }
-}
-
-@media (max-height: 600px) {
-  .wrap {
-    margin: 0px auto 50px;
-  }
-}
-@media (min-height: 600px) {
-  .wrap {
-    margin: 0px auto -200px;
-  }
 }
