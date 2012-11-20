@@ -32,7 +32,7 @@ def index():
         resp = get('https://api.opencnam.com/v1/phone/%s?format=json' % number,
             auth = (app.config['OPENCNAM_ACCOUNT_SID'], app.config['OPENCNAM_AUTH_TOKEN'])
         )
-        name = resp.json['name'] if resp.status_code == 200 else ''
+        name = resp.json['cnam'] if resp.status_code == 200 else ''
         number = resp.json['number'] if resp.status_code == 200 else number
 
     return render_template('index.html', name=name, number=number)
