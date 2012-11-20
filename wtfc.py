@@ -29,7 +29,7 @@ def index():
     number = request.args.get('q')
 
     if number:
-        resp = get('https://api.opencnam.com/v2/phone/%s?format=json' % number,
+        resp = get('https://api.opencnam.com/v1/phone/%s?format=json' % number,
             auth = (app.config['OPENCNAM_ACCOUNT_SID'], app.config['OPENCNAM_AUTH_TOKEN'])
         )
         name = resp.json['name'] if resp.status_code == 200 else ''
