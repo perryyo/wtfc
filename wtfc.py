@@ -3,7 +3,7 @@
 
 from os import environ
 
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, make_response, render_template, request
 from requests import get
 
 
@@ -12,6 +12,13 @@ app = Flask(__name__)
 app.config['DEBUG'] = True if environ.get('DEBUG') else False
 app.config['OPENCNAM_ACCOUNT_SID'] = environ.get('OPENCNAM_ACCOUNT_SID', '')
 app.config['OPENCNAM_AUTH_TOKEN'] = environ.get('OPENCNAM_AUTH_TOKEN', '')
+
+# Cache all static content for 30 days.
+CACHE_TIMEOUT = 60 * 60 * 24 * 30
+
+# Default HTTP Cache-Control header content.
+app.config['CACHE_CONTROL'] = 'max-age=%s, s-maxage=%s, must-revalidate' % (
+       CACHE_TIMEOUT, CACHE_TIMEOUT)
 
 
 ##### VIEWS
@@ -29,3 +36,19 @@ def index():
         number = resp.json['number'] if resp.status_code == 200 else number
 
     return render_template('index.html', name=name, number=number)
+
+
+@app.route('/robots.txt')
+def robots():
+    response = make_response(render_template('robots.txt'))
+    response.headers['Cache-Control'] = app.config['CACHE_CONTROL']
+    response.mimetype = 'text/plain'
+    return response
+
+
+@app.route('/sitemap.xml')
+def sitemap():
+    response = make_response(render_template('sitemap.xml'))
+    response.headers['Cache-Control'] = app.config['CACHE_CONTROL']
+    response.mimetype = 'application/xml'
+    return response
